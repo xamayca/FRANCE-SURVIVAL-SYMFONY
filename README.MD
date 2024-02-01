@@ -14,7 +14,8 @@
 > installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
 
 - __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
->  initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js") et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
+> Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js"). 
+> Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
 
 

@@ -1,11 +1,11 @@
 # CREATION DU SITE WEB ARK: FRANCE SURVIVAL AVEC LE FRAMEWORK SYMFONY #
 
-## CREATION DU DOSSIER ET DES PREMIERS ELEMENTS DE NOTRE SITE #
+## CREATION DU DOSSIER ET DES PREMIERS ELEMENTS DE NOTRE SITE ##
 - __Executé la commande :__ `symfony new FRANCE-SURVIVAL-SYMFONY`.
 - __Lancé le serveur Local Symfony avec la commande :__ `symfony server:start`.
 - __Verifier que le site fonctionne :__ `http://127.0.0.1:8000/`.
 
-## VERIFICATION DE LA SECURITE AVEC SYMFONY #
+## VERIFICATION DE LA SECURITE AVEC SYMFONY ##
 - __Executé la commande :__ `symfony check:security`.
 > Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
 > Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
@@ -18,7 +18,7 @@
 - __Executé la commande :__ `composer require twig`.
 > Cette commande installe le bundle Twig, qui permet de gérer les templates et les vues dans un projet Symfony.".
 
-## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE #
+## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE ##
 - __Executé la commande :__ `symfony console make:controller HomeController`.
 > Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".
 
@@ -43,17 +43,32 @@
 ```
 > Cette modification de la route ajuste l'URL pour atteindre la page d'accueil de votre projet Symfony, de "/home" à la racine du projet ("/").
 
-# VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
-- Aller dans `templates/home/index.html.twig` et modifier la fonction suivante `index()` en :
-```js
-    public function index(): Response
-{
-    return $this->render('home/index.html.twig', [
-        'controller_name' => 'HomeController',
-]);
-}
-```
+## MODIFICATION DU MODELE TWIG ##
 
+#  #
+- Dans le fichier `templates/home/index.html.twig`, ajoutez la ligne :
+```js
+{% extends 'base.html.twig' %}
+```
+> Cette ligne indique que le contenu de "index.html.twig" sera intégré dans le modèle "base.html.twig".
+> Permettant ainsi d'utiliser la structure définie dans "base.html.twig" pour la page d'accueil.
+
+- Toujours dans le fichier `templates/home/index.html.twig`, ajoutez les lignes :
+```js
+{% block title %}  {% endblock %}
+
+{% block body %}
+
+ICI LA PAGE INDEX
+
+{% endblock %}
+```
+> La balise `{% block title %}` contient le titre de notre page dans l'onglet du navigateur et doit être fermé par `{% endblock %}`.
+> La balise `{% block body %}` contient le contenu de notre page `templates/home/index.html.twig` affiché dans le navigateur et doit être fermé par `{% endblock %}`.
+
+# VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
+- __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
+> Si tout va bien, on devrait voir apparaitre à l'écran `ICI LA PAGE INDEX`, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
 
 
 
@@ -87,7 +102,7 @@ content: [
     "./templates/**/*.html.twig",
 ]
 ```
-> Nécessaire pour que Tailwind CSS détecte et traite les classes CSS utilisées dans les fichiers JavaScript ".js" et HTML Twig ".html.twig" de notre projet
+> Nécessaire pour que Tailwind CSS détecte et traite les classes CSS utilisées dans les fichiers JavaScript ".js" et HTML Twig ".html.twig" de notre projet.
 
 ### ACTIVATION DES CLASSES CSS AVEC TAILWIND CSS ###
 - Se rendre dans `assets/styles/app.css` et ajouter les lignes :

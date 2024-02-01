@@ -7,7 +7,7 @@
 
 ## INSTALLATION DES BUNDLES UTILES A NOTRE SITE ##
 
-> - __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.
-> Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.)
+- __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.
+>Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.)
 
 Commande: `composer install`.

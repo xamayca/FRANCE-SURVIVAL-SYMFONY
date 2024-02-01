@@ -75,12 +75,9 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 > La balise `{% block title %}` contient le titre de notre page dans l'onglet du navigateur et doit être fermé par `{% endblock %}`.
 > La balise `{% block body %}` contient le contenu de notre page `templates/home/index.html.twig` affiché dans le navigateur et doit être fermé par `{% endblock %}`.
 
-
-
 ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
 - __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
-> Si tout va bien, on devrait voir apparaitre à l'écran `ICI LA PAGE INDEX`, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
-
+> Si tout va bien, on devrait voir apparaitre notre texte à l'écran, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
 
 
 # INSTALLATION DE TAILWIND CSS #

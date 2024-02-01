@@ -5,9 +5,18 @@
 - __Lancé le serveur Local Symfony :__ `symfony server:start`.
 - __Verifier que le site fonctionne :__ `http://127.0.0.1:8000/`.
 
-## INSTALLATION DES BUNDLES UTILES A NOTRE SITE ##
-
+# INSTALLATION DE TAILWIND CSS #
+## INSTALLATION DES BUNDLES NECESSAIRE ##
 - __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.
-> Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.)
+> Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.).
 
+- __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
+> installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
+
+- __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
+>  initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js") et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
+
+
+
+Commande: `npm run install`.
 Commande: `composer install`.

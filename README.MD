@@ -10,6 +10,10 @@
 > Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
 > Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
 
+## INSTALLATION DES BUNDLES NECESSAIRE ##
+- __Executé la commande :__ `composer require symfony/maker-bundle`.
+> Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".
+
 ## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE #
 - __Executé la commande :__ `symfony console make:controller HomeController`.
 > Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".

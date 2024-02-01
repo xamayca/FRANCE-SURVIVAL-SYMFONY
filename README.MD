@@ -52,4 +52,5 @@ content: [
 
 
 Commande: `npm run install`.
+
 Commande: `composer install`.

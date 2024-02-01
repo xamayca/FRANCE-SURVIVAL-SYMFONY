@@ -42,7 +42,6 @@
 #[Route('/home', name: 'app_home')] en #[Route('/', name: 'app_home')] 
 ```
 > Cette modification de la route ajuste l'URL pour atteindre la page d'accueil de votre projet Symfony, de "/home" à la racine du projet ("/").
-base.html.twig
 
 
 ### LA PAGE /base.html.twig ###

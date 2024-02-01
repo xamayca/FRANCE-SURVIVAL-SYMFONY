@@ -51,7 +51,7 @@ base.html.twig
 <h1> Ce titre est généré par BASE.HTML.TWIG !</h1>
 <h2>La page <code>/base.html.twig</code> est un modèle de base dans un projet Symfony.</h2>
 <h3>Elle définit la structure commune à l'ensemble du site web, y compris les éléments tels que l'en-tête, le pied de page, les menus de navigation, et d'autres éléments récurrents.</h3>
-<h4></h4>
+<h4>L'importance de l'extension {<code>% extends 'base.html.twig' %</code>} réside dans le fait qu'elle permet à d'autres pages, comme <code>/home/index.html.twig</code>, d'étendre cette structure de base.</h4>
 ```
 
 ### LA PAGE /home/index.html.twig ###
@@ -68,7 +68,7 @@ base.html.twig
 
 {% block body %}
 
-ICI LA PAGE INDEX
+ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 
 {% endblock %}
 ```

@@ -50,6 +50,14 @@ content: [
 - __Executé la commande :__ `npm run watch` dans un nouveau terminal dédié.
 > Surveille les fichiers de votre projet et compile automatiquement les modifications en temps réel.
 
+## Vérification de notre installation de notre TailWind css ##
+- Se rendre dans `assets/styles/app.css` et ajouter les lignes :
+```js
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+```
+
 
 Commande: `npm run install`.
 

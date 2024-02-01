@@ -7,6 +7,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
+    // Enables automatic loading and processing of CSS files with PostCSS Loader
     .enablePostCssLoader()
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')

@@ -8,14 +8,14 @@
 # INSTALLATION DE TAILWIND CSS #
 ## INSTALLATION DES BUNDLES NECESSAIRE ##
 - __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.
-> Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.).
+> - Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.).
 
 - __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
 > installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
 
 - __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
-> Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js"). 
-> Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
+> - Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js"). 
+> - Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
 ### Activé le chargement de PostCSS ###
 - Se rendre dans `webpack.config.js` et ajouter la ligne:
@@ -25,7 +25,7 @@ Encore
   .enablePostCssLoader()
 ;
 ```
-> Cela permet d'appliquer des transformations et des optimisations au code CSS de manière automatisée grâce aux plugins configurés dans notre projet.
+> - Cela permet d'appliquer des transformations et des optimisations au code CSS de manière automatisée grâce aux plugins configurés dans notre projet.
 
 
 Commande: `npm run install`.

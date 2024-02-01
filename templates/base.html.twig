@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <h1> Ce titre est généré par BASE.HTML.TWIG !</h1>
+        <p>
+            La page <code>/base.html.twig</code> est un modèle de base dans un projet Symfony. Elle définit la structure commune à l'ensemble du site web, y compris les éléments tels que l'en-tête, le pied de page, les menus de navigation, et d'autres éléments récurrents.
+        </p>
+        <p>
+            L'importance de l'extension {<code>% extends 'base.html.twig' %</code>} réside dans le fait qu'elle permet à d'autres pages, comme <code>/home/index.html.twig</code>, d'étendre cette structure de base.
+        </p>
+        <p>
+            Cela signifie que la mise en page et les éléments communs sont réutilisés sur toutes les pages, ce qui facilite la gestion globale du site et permet des mises à jour centralisées.
+        </p>
+        <p>
+            Chaque page peut également personnaliser son contenu spécifique tout en profitant de la structure commune fournie par <code>/base.html.twig</code>.
+        </p>
+
+        {% block body %}
+
+
+
+        {% endblock %}
+    </body>
+</html>
+
+
+

@@ -120,17 +120,33 @@ content: [
 ```
 > Directives essentielles pour permettre à Tailwind CSS de reconnaître et d'appliquer les classes CSS utilisées dans les fichiers .js et .html.twig de notre projet.
 
+### INCLUSION DES FICHIERS CSS & JAVASCRIPT ###
+- Se rendre dans `templates/base.html.twig` et ajouter les lignes :
+```js
+<head>
+{% block stylesheets %}
+{{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+{% block javascripts %}
+{{ encore_entry_script_tags('app') }}
+{% endblock %}
+</head>
+```
+> Ces blocs permettent d'inclure automatiquement les ressources front-end nécessaires à notre app Symfony avec les fonctions Twig "encore_entry_link_tags" et "encore_entry_script_tags".
+
 ### COMPILER NOS FICHIERS DE STYLES EN TEMPS REEL ###
 - __Executé la commande :__ `npm run watch` dans un nouveau terminal dédié.
 > Surveille les fichiers de votre projet et compile automatiquement les modifications en temps réel.
 
 ## VERIFICATION DE NOTRE INSTALLATION DE TAILWIND CSS ##
-- Se rendre dans `assets/styles/app.css` et ajouter les lignes :
+- Se rendre dans `templates/home/index.html.twig` et ajouter les lignes :
 ```js
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<h1 class="text-3xl font-bold underline text-red-500">
+    ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
+</h1>
 ```
+> Si tout va bien, on doit voir la police changée et notre h1 être souligné en gras et Rouge !
 
 
 Commande: `npm run install`.

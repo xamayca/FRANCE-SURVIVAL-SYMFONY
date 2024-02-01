@@ -17,7 +17,7 @@
 > Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration ("tailwind.config.js"). 
 > Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
-### INSTALLATION DES BUNDLES NECESSAIRE ###
+### Activé le chargement de PostCSS ###
 - Se rendre dans `webpack.config.js` et ajouter la ligne:
 ```js
 Encore
@@ -25,6 +25,7 @@ Encore
   .enablePostCssLoader()
 ;
 ```
+> Cela permet d'appliquer des transformations et des optimisations au code CSS de manière automatisée grâce aux plugins configurés dans notre projet.
 
 
 Commande: `npm run install`.

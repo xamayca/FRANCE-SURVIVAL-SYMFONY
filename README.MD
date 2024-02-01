@@ -5,6 +5,22 @@
 - __Lancé le serveur Local Symfony avec la commande :__ `symfony server:start`.
 - __Verifier que le site fonctionne :__ `http://127.0.0.1:8000/`.
 
+## VERIFICATION DE LA SECURITE AVEC SYMFONY #
+- __Executé la commande :__ `symfony check:security`.
+> Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
+> Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
+
+## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE #
+- __Executé la commande :__ `symfony console make:controller HomeController`.
+> Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".
+
+
+
+
+
+
+
+
 # INSTALLATION DE TAILWIND CSS #
 ## INSTALLATION DES BUNDLES NECESSAIRE ##
 - __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.

@@ -42,10 +42,19 @@
 #[Route('/home', name: 'app_home')] en #[Route('/', name: 'app_home')] 
 ```
 > Cette modification de la route ajuste l'URL pour atteindre la page d'accueil de votre projet Symfony, de "/home" à la racine du projet ("/").
+base.html.twig
 
-## MODIFICATION DU MODELE TWIG ##
 
-#  #
+### LA PAGE /base.html.twig ###
+- Dans le fichier `templates/base.html.twig`, ajoutez les lignes :
+```js
+<h1> Ce titre est généré par BASE.HTML.TWIG !</h1>
+<h2>La page <code>/base.html.twig</code> est un modèle de base dans un projet Symfony.</h2>
+<h3>Elle définit la structure commune à l'ensemble du site web, y compris les éléments tels que l'en-tête, le pied de page, les menus de navigation, et d'autres éléments récurrents.</h3>
+<h4></h4>
+```
+
+### LA PAGE /home/index.html.twig ###
 - Dans le fichier `templates/home/index.html.twig`, ajoutez la ligne :
 ```js
 {% extends 'base.html.twig' %}
@@ -66,7 +75,9 @@ ICI LA PAGE INDEX
 > La balise `{% block title %}` contient le titre de notre page dans l'onglet du navigateur et doit être fermé par `{% endblock %}`.
 > La balise `{% block body %}` contient le contenu de notre page `templates/home/index.html.twig` affiché dans le navigateur et doit être fermé par `{% endblock %}`.
 
-# VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
+
+
+## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
 - __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
 > Si tout va bien, on devrait voir apparaitre à l'écran `ICI LA PAGE INDEX`, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
 

@@ -151,7 +151,7 @@ content: [
     ICI APPARAIT LE CONTENU DE NOTRE PAGE HOME (templates/home/index.html.twig)
 </h1>
 ```
-> Si tout va bien, on doit voir la police changée et notre h1 être souligné en gras et Rouge !
+> Si tout va bien, on doit voir la police changée et notre `h1` être souligné en gras et Rouge !
 > ![img.png](readme-image/view-text-tailwind.png)
 
 
@@ -195,9 +195,32 @@ public function contact(): Response
 
 ### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
 - Se rendre sur `http://127.0.0.1:8000/`.
-> Si tout va bien, quand on clique sur notre lien 'test' dans la navbar, on doit être redirigé sur `http://127.0.0.1:8000/test` et voir notre h1 apparaitre à l'écran.
+> Si tout va bien, quand on clique sur notre lien `test` dans la navbar, on doit être redirigé sur `http://127.0.0.1:8000/test` et voir notre `h1` apparaitre à l'écran.
 > ![img.png](readme-image/view-text-test-page.png)
+
+# CREATION DE LA BASE DE DONNEE DE NOTRE PROJET SYMFONY #
+## INSTALLATION DU BUNDLE DOCTRINE ##
+- __Executer la commande :__ `composer require orm`.
+> - Cela va ajouter le bundle `doctrine/orm` ainsi que ses dépendances à votre projet Symfony.
+> - Ce bundle permet d'intégrer Doctrine dans Symfony pour la gestion de la base de données et des entités (objet d'une table de base de données).
+- Un choix sera demander pour inclure la configuration de `Docker` :
+```js
+Do you want to include Docker configuration from recipes?
+    [y] Yes
+    [n] No
+    [p] Yes permanently, never ask again for this project
+    [x] No permanently, never ask again for this project
+    (defaults to y):
+```
+- Faire `Yes ou Y` si on veut installer docker.
+- Faire `No ou N` si on ne veut pas installer docker.
+- Faire `p` si on veut installer docker de façon permanente, ne plus demander pour ce projet.
+- Faire `x` si on ne veut pas installer docker de façon permanente, ne plus demander pour ce projet.
+- Par défaut, ce sera `Yes`.
+
+## CREATION DE NOTRE PREMIERE ENTITE EN BASE DE DONEE ##
 
 
 Commande: `npm run install`.
+
 Commande: `composer install`.

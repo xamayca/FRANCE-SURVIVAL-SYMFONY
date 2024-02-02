@@ -204,6 +204,11 @@ public function contact(): Response
 > - Cela va ajouter le bundle `doctrine/orm` ainsi que ses dépendances à votre projet Symfony.
 > - Ce bundle permet d'intégrer Doctrine dans Symfony pour la gestion de la base de données et des entités (objet d'une table de base de données).
 
+- __Executer la commande :__ `composer require symfony/maker-bundle --dev`.
+> - Ajoute le symfony/maker-bundle comme dépendance de développement dans notre projet Symfony.
+> - Cela signifie que le bundle sera utilisé uniquement pour le développement local et ne sera pas installé en production.
+> - Le bundle Maker de Symfony fournit un ensemble de commandes pratiques qui aident à générer du code (comme des contrôleurs, des entités, des formulaires, etc.) et à accélérer le développement.
+
 ## CREATION DE NOTRE BASE DE DONEE ##
 - Se rendre a la racine du projet Symfony dans le fichier `.env` et décommenter la ligne:
 ```js

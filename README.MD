@@ -1,30 +1,31 @@
 # CREATION D'UN SITE WEB AVEC LE FRAMEWORK SYMFONY #
 
 ## CREATION DU DOSSIER ET DES PREMIERS ELEMENTS DE NOTRE SITE ##
-- __Executé la commande :__ `symfony new FRANCE-SURVIVAL-SYMFONY`.
+- __Executer la commande :__ `symfony new FRANCE-SURVIVAL-SYMFONY`.
 - __Lancé le serveur Local Symfony avec la commande :__ `symfony server:start`.
 - __Verifier que le site fonctionne :__ `http://127.0.0.1:8000/`.
 
 ## UTILISER LA BARRE DE DEBUG DEV SYMFONY ##
-- __Executé la commande :__ `composer req debug --dev`.
+- __Executer la commande :__ `composer req debug --dev`.
 > Ajoute la barre de débogage Symfony pour faciliter le débogage des applications Symfony en mode développement.
 
 ## VERIFICATION DE LA SECURITE AVEC SYMFONY ##
-- __Executé la commande :__ `symfony check:security`.
+- __Executer la commande :__ `symfony check:security`.
 > - Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
 > - Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
 
 ## INSTALLATION DES BUNDLES REQUIS ##
-- __Executé la commande :__ `composer require symfony/maker-bundle`.
+- __Executer la commande :__ `composer require symfony/maker-bundle`.
 > Cette commande installe le bundle "maker" de Symfony, nécessaire pour générer des contrôleurs et d'autres éléments essentiels de notre projet Symfony.".
 
 ## INSTALLATION DU BUNDLE TWIG ##
-- __Executé la commande :__ `composer require twig`.
+- __Executer la commande :__ `composer require twig`.
 > Cette commande installe le bundle Twig, qui permet de gérer les templates et les vues dans un projet Symfony.".
 
 ## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE ##
 ### LE HOME CONTROLLER SERS A L'AFFICHAGE DES VUES SIMPLE NE NECESSITANT PAS DE CONTROLLER UNIQUE A CETTE PAGE ###
-- __Executé la commande :__ `symfony console make:controller HomeController`.
+#### C'EST A DIRE PAS DE LOGIQUE SUPPLEMENTAIRE ####
+- __Executer la commande :__ `symfony console make:controller HomeController`.
 > Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".
 
 - Aller dans `src\Controller\HomeController.php` et modifier la fonction suivante `index()` en :
@@ -36,7 +37,7 @@
 ]);
 }
 ```
-- Importé la classe pour Response `use Symfony\Component\HttpFoundation\Response;`.
+- Importer la classe pour Response `use Symfony\Component\HttpFoundation\Response;`.
 > Cette instruction permet d'utiliser la classe Response de Symfony pour gérer les réponses HTTP dans un projet Symfony.
 
 - Crée le template Twig en passant la souris sur `'home/index.html.twig'`.
@@ -85,13 +86,13 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE HOME (templates/home/index.html.twig)
 
 # INSTALLATION DE TAILWIND CSS #
 ## INSTALLATION DES BUNDLES REQUIS ##
-- __Executé la commande :__ `composer require symfony/webpack-encore-bundle`.
+- __Executer la commande :__ `composer require symfony/webpack-encore-bundle`.
 > Ajoute le bundle "Webpack Encore" à un projet Symfony pour faciliter la gestion des ressources front-end (CSS, JavaScript, etc.).
 
-- __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
+- __Executer la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
 > installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
 
-- __Executé la commande :__ `npx tailwindcss init -p`.
+- __Executer la commande :__ `npx tailwindcss init -p`.
 > - Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration tailwind.config.js. 
 > - Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
@@ -140,7 +141,7 @@ content: [
 > Ces blocs permettent d'inclure automatiquement les ressources front-end nécessaires à notre app Symfony avec les fonctions Twig "encore_entry_link_tags" et "encore_entry_script_tags".
 
 ### COMPILER NOS FICHIERS DE STYLES EN TEMPS REEL ###
-- __Executé la commande :__ `npm run watch` dans un nouveau terminal dédié.
+- __Executer la commande :__ `npm run watch` dans un nouveau terminal dédié.
 > Surveille les fichiers de votre projet et compile automatiquement les modifications en temps réel.
 
 ## VERIFICATION DE NOTRE INSTALLATION DE TAILWIND CSS ##
@@ -155,7 +156,8 @@ content: [
 
 
 # AVANT DE COMMENCER ON PASSE A L'INSTALLATION DU BUNDLE DE SECURITE #
-- __Executé la commande :__ `composer require symfony/security-bundle`.
+## DOIS OBLIGATOIREMENT ETRE INSTALLER AVANT LA CREATION DE L'ENREGISTREMENT, CONNEXION ETC.. (FORMULAIRES) ##
+- __Executer la commande :__ `composer require symfony/security-bundle`.
 > - Ce composant fait partie du système de sécurité de Symfony et offre des fonctionnalités pour gérer l'authentification, l'autorisation et la sécurité dans une application Symfony.
 > - Cela inclut la configuration de l'authentification des utilisateurs, la gestion des rôles et des autorisations, ainsi que la protection contre les attaques CSRF (Cross-Site Request Forgery), etc.
 
@@ -180,7 +182,7 @@ public function contact(): Response
 ```
 - Passé la souris sur `'home/test.html.twig` pour générer automatiquement le template twig (la vue).
 - Se rendre sur notre navbar dans `templates\base.html.twig` et y ajouter notre nouveau lien `{{ path('app_test') }}`.
-- Se rendre sur le template twig `` et y ajouter notre texte entre les balises `block` :
+- Se rendre sur le template twig `templates\home\test.html.twig` et y ajouter notre texte entre les balises `block` :
 ```js
 {% block body %}
 

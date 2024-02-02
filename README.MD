@@ -300,8 +300,31 @@ Class name of the entity to create or update (e.g. VictoriousChef):
 - __Executer la commande suivante dans un terminal :__ `symfony console d:s:u -f` pour mettre à jour notre table user.
 
 ### VERIFICATION DE L'AJOUT DU USERNAME A NOTRE TABLE USER ###
-> - Se rendre dans l'interface de base de donnée de PHP Storm, actualiser, nous avons maintenant :
-> ![img.png](readme-image/database-verification-username-creation-1.png)
+- Se rendre dans l'interface de base de donnée de PHP Storm, actualiser, nous avons maintenant :
+>![img.png](readme-image/database-verification-username-creation-1.png)
+- Se rendre dans `src\Entity\User.php`, nous avons maintenant :
+```js
+#[ORM\Column(length: 50)]
+private ?string $username = null;
+
+# ET PLUS BAS NOUS AVONS :
+    public function getUsername(): ?string
+{
+    return $this->username;
+}
+
+public function setUsername(string $username): static
+{
+    $this->username = $username;
+    return $this;
+}
+```
+> - La fonction `getUsername` permet `d'accéder (get)` à la valeur de l'attribut `$username` de `l'objet User(table)` partout dans notre site.
+> - La fonction `setUsername` utilisée pour `définir (set)` la valeur de l'attribut `$username` dans `l'objet User(table)` partout dans notre site.
+
+
+
+
 
 > - **Command Terminal Utile:**`npm run install`.
 > - **Command Terminal Utile:**`npm run watch`.

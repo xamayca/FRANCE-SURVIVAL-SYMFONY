@@ -230,14 +230,14 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 > > ![img.png](readme-image/link-database-2.png)
 > > ![img.png](readme-image/link-database-3.png)
 > > ![img.png](readme-image/link-database-4.png)
-> #### VERIFIER LES INFORMATIONS AVANT D'APPLIQUER ET DE VALIDER.
+> #### VERIFIER LES INFORMATIONS AVANT D'APPLIQUER ET DE VALIDER NOTRE LIAISON A LA BASE DE DONNEE.
 
 ### VERIFICATION DE LA CREATION DE NOTRE BASE DE DONNEE ###
 - Se rendre à la racine de notre projet dans `var\data.db`.
 > Ce fichier est pour l'instant vide, il se remplira quand on créera des entités avec Symfony.
 
-## CREATION DE NOTRE PREMIERE ENTITE (TABLE) EN BASE DE DONEE ##
-- __Executer la commande suivante dans un terminal :__ `symfony console make:user` et suivre les étapes.
+## CREATION DE NOTRE PREMIERE ENTITY (TABLE) EN BASE DE DONEE ##
+- __Executer la commande suivante dans un terminal :__ `symfony console make:user` et suivre les étapes :
 ```js
  The name of the security user class (e.g. User) [User]:
  > User
@@ -260,12 +260,50 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 > - L'avertissement nous dit de choisir `No` si les mots de passe ne sont pas nécessaires ou s'ils seront vérifiés/hachés par un autre système.`
 > - La quatrième question nous demande donc si on veut `hash(sécurité)` les mots de passe de nos utilisateurs, donc `Yes`.
 
-# VERIFICATION DE LA CREATION DE NOTRE ENTITE USER #
+# VERIFICATION DE LA CREATION DE NOTRE ENTITY USER #
 - Le fichier `src\Entity\User.php`, dans Symfony représente la classe d'entité pour modéliser et gérer les utilisateurs d'une application web.
 - Le fichier `src\Repository\UserRepository.php`, dans Symfony est généralement utilisé pour gérer les opérations de requête et d'accès à la base de données concernant les entités de l'utilisateur (User) de l'application..
-> __Executer la commande suivante dans un terminal :__ `symfony console d:s:u -f` pour mettre à jour le schéma de notre base de donnée.
-> > ![img.png](readme-image/database-verification-user-creation.png)
+> - __Executer la commande suivante dans un terminal :__ `symfony console d:s:u -f` pour mettre à jour le schéma de notre base de donnée.
+> - Cliquer sur actualiser pour recharger la base de donnée dans notre IDE(PHP Storm).
+> > ![img.png](readme-image/database-verification-user-creation-1.png)
+> ![img.png](readme-image/database-verification-user-creation-2.png)
 
-Commande: `npm run install`.
+## AJOUTER UN CHAMP A NOTRE ENTITY USER (USERNAME) ##
+- __Executer la commande :__ `symfony console make:entity` et suivre les étapes :
+```js
+Class name of the entity to create or update (e.g. VictoriousChef):
+ > User
 
-Commande: `composer install`.
+ Your entity already exists! So let's add some new fields!
+
+ New property name (press <return> to stop adding fields):
+ > username
+
+ Field type (enter ? to see all types) [string]:
+ > string
+
+ Field length [255]:
+ > 50 
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > no 
+
+ updated: src/Entity/User.php
+```
+> - La premiere question demande le nom de l'entité que l'on veut créer où mettre à jour, nous allons mettre à jour `User`.
+> - L'avertissement nous dit que notre entité existe déja, nous allons donc lui ajouter des champs.
+> - La deuxième question demande quel nom attribuer à notre nouvelle propriété `username` dans notre cas.
+> - La troisième question demande de quel type est la propriété que nous voulons ajouter `string (chaîne de caractères)` dans notre cas..
+> - La quatrième question nous demande la longueur de notre string `50` caractères dans notre cas.
+> - La cinquième question nous demande si notre propriété peu être null dans la base de donnéé, `No` dans notre cas.
+> > Nous allons inviter l'utilisateur a entré son pseudo à l'inscription donc cette propriété est `obligatoire (Not null)`, on met `null` si on veut des `champs de formulaire facultatif` par exemple.
+- __Executer la commande suivante dans un terminal :__ `symfony console d:s:u -f` pour mettre à jour notre table user.
+
+### VERIFICATION DE L'AJOUT DU USERNAME A NOTRE TABLE USER ###
+> - Se rendre dans l'interface de base de donnée de PHP Storm, actualiser, nous avons maintenant :
+> ![img.png](readme-image/database-verification-username-creation-1.png)
+
+> - **Command Terminal Utile:**`npm run install`.
+> - **Command Terminal Utile:**`npm run watch`.
+> - **Command Terminal Utile:**`composer install`.
+> - **Command Terminal Utile:**`composer update`.

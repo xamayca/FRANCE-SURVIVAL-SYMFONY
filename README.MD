@@ -161,7 +161,7 @@ content: [
 
 ## MISE EN PLACE D'UNE BARRE DE NAVIGATION DE BASE ##
 - Se rendre sur `https://flowbite.com/docs/components/navbar/` et choisir une navbar simple.
-- Se rendre dans `templates\base.html.twig` et y ajouter notre navbar.
+- Se rendre dans `templates\base.html.twig` et y ajouter notre navbar au dessus de la balise `{% block body %}` pour que ce sois visible sur toutes nos pages.
 - Se rendre dans `src\Controller\HomeController` et trouvez le nom de la route que l'on veut utiliser (exemple : app_home).
 - Les `href` dans Symfony s'écrivent de la manière suivante :
 ```js
@@ -190,7 +190,7 @@ public function contact(): Response
 ```
 
 ### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
-- Se rendre sur `'home/test.html.twig` .
+- Se rendre sur `'home/test.html.twig'`.
 
 
 

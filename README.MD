@@ -71,7 +71,7 @@
 
 {% block body %}
 
-ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
+ICI APPARAIT LE CONTENU DE NOTRE PAGE HOME (templates/home/index.html.twig)
 
 {% endblock %}
 ```
@@ -147,7 +147,7 @@ content: [
 - Se rendre dans `templates/home/index.html.twig` et ajouter les lignes :
 ```js
 <h1 class="text-3xl font-bold underline text-red-500">
-    ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
+    ICI APPARAIT LE CONTENU DE NOTRE PAGE HOME (templates/home/index.html.twig)
 </h1>
 ```
 > Si tout va bien, on doit voir la police changée et notre h1 être souligné en gras et Rouge !
@@ -184,14 +184,17 @@ public function contact(): Response
 ```js
 {% block body %}
 
-    JE SUIS SUR MA PAGE DE TEST
+<h1 class="text-3xl font-bold underline text-blue-500">
+    ICI APPARAIT LE CONTENU DE NOTRE PAGE TEST (templates/home/test.html.twig)
+</h1>
 
 {% endblock %}
 ```
 
 ### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
-- Se rendre sur `'home/test.html.twig'`.
-
+- Se rendre sur `http://127.0.0.1:8000/`.
+> Si tout va bien, quand on clique sur notre lien 'test' dans la navbar, on doit être redirigé sur `http://127.0.0.1:8000/test` et voir notre h1 apparaitre à l'écran.
+> ![img.png](readme-image/view-text-test-page.png)
 
 
 Commande: `npm run install`.

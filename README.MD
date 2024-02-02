@@ -224,12 +224,43 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 - __Executer la commande :__ `symfony console doctrine:database:create`.
 > Cette commande crée la base de données pour notre projet Symfony en utilisant la configuration définie dans le fichier `.env`.
 
+## LIAISON DE NOTRE BASE DE DONNEE A NOTRE PROJET SYMFONY ##
+- Dans PHP Storm, cliquer sur l'icône base de donnée et ensuite :
+> ![img.png](readme-image/link-database-1.png)
+> ![img.png](readme-image/link-database-2.png)
+> ![img.png](readme-image/link-database-3.png)
+> ![img.png](readme-image/link-database-4.png)
+> #### VERIFIER LES INFORMATIONS AVANT D'APPLIQUER ET DE VALIDER.
+
 ### VERIFICATION DE LA CREATION DE NOTRE BASE DE DONNEE ###
 - Se rendre à la racine de notre projet dans `var\data.db`.
 > Ce fichier est pour l'instant vide, il se remplira quand on créera des entités avec Symfony.
 
 ## CREATION DE NOTRE PREMIERE ENTITE (TABLE) EN BASE DE DONEE ##
-- __Executer la commande suivante dans un terminal :__ `symfony console make:user`.
+- __Executer la commande suivante dans un terminal :__ `symfony console make:user` et suivre les étapes.
+```js
+ The name of the security user class (e.g. User) [User]:
+ > User
+
+ Do you want to store user data in the database (via Doctrine)? (yes/no) [yes]:
+ > yes
+
+ Enter a property name that will be the unique "display" name for the user (e.g. email, username, uuid) [email]:
+ > email
+
+ Will this app need to hash/check user passwords? Choose No if passwords are not needed or will be checked/hashed by some other system (e.g. a single sign-on server).
+
+ Does this app need to hash/check user passwords? (yes/no) [yes]:
+ > yes
+
+```
+> - La premiere question demande le nom de l'entité, ce sera `User`.
+> - La deuxième question demande si on veut la stocker avec doctrine dans notre base de données, `Yes` dans notre cas.
+> - La troisième question demande de quelle façon nous voulons identifier nos utilisateurs de facon unique, ce sera `l'email` pour nous.
+> - L'avertissement nous dit de choisir `No` si les mots de passe ne sont pas nécessaires ou s'ils seront vérifiés/hachés par un autre système.`
+> - La quatrième question nous demande donc si on veut `hash(sécurité)` les mots de passe de nos utilisateurs, donc `Yes`.
+
+# VERIFICATION DE LA CREATION DE NOTRE ENTITE USER #
 
 
 

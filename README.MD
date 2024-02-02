@@ -81,7 +81,7 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
 - __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
 > Si tout va bien, on devrait voir apparaitre notre texte à l'écran, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
-
+> ![img.png](readme-image/view-text-twig.png)
 
 # INSTALLATION DE TAILWIND CSS #
 ## INSTALLATION DES BUNDLES REQUIS ##
@@ -151,6 +151,7 @@ content: [
 </h1>
 ```
 > Si tout va bien, on doit voir la police changée et notre h1 être souligné en gras et Rouge !
+> ![img.png](readme-image/view-text-tailwind.png)
 
 
 # AVANT DE COMMENCER ON PASSE A L'INSTALLATION DU BUNDLE DE SECURITE #
@@ -187,6 +188,7 @@ public function contact(): Response
 
 {% endblock %}
 ```
+
 ### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
 - Se rendre sur `'home/test.html.twig` .
 

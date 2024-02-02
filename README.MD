@@ -11,8 +11,8 @@
 
 ## VERIFICATION DE LA SECURITE AVEC SYMFONY ##
 - __Executé la commande :__ `symfony check:security`.
-> Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
-> Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
+> - Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
+> - Une bonne pratique de sécurité et d'exécuter cette commande régulièrement pour mettre à jour ou remplacer les dépendances compromises dès que possible.
 
 ## INSTALLATION DES BUNDLES REQUIS ##
 - __Executé la commande :__ `composer require symfony/maker-bundle`.
@@ -23,6 +23,7 @@
 > Cette commande installe le bundle Twig, qui permet de gérer les templates et les vues dans un projet Symfony.".
 
 ## CREATION D'UN HOME CONTROLLER ET DE NOTRE PREMIERE PAGE ##
+### LE HOME CONTROLLER SERS A L'AFFICHAGE DES VUES SIMPLE NE NECESSITANT PAS DE CONTROLLER UNIQUE A CETTE PAGE ###
 - __Executé la commande :__ `symfony console make:controller HomeController`.
 > Cette commande générera un fichier de contrôleur dans le répertoire "src/Controller".
 
@@ -47,7 +48,6 @@
 ```
 > Cette modification de la route ajuste l'URL pour atteindre la page d'accueil de votre projet Symfony, de "/home" à la racine du projet ("/").
 
-
 ### LA PAGE /base.html.twig ###
 - Dans le fichier `templates/base.html.twig`, ajoutez les lignes :
 ```js
@@ -62,8 +62,8 @@
 ```js
 {% extends 'base.html.twig' %}
 ```
-> Cette ligne indique que le contenu de "index.html.twig" sera intégré dans le modèle "base.html.twig".
-> Permettant ainsi d'utiliser la structure définie dans "base.html.twig" pour la page d'accueil.
+> - Cette ligne indique que le contenu de "index.html.twig" sera intégré dans le modèle "base.html.twig".
+> - Permettant ainsi d'utiliser la structure définie dans "base.html.twig" pour la page d'accueil.
 
 - Toujours dans le fichier `templates/home/index.html.twig`, ajoutez les lignes :
 ```js
@@ -75,8 +75,8 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 
 {% endblock %}
 ```
-> La balise `{% block title %}` contient le titre de notre page dans l'onglet du navigateur et doit être fermé par `{% endblock %}`.
-> La balise `{% block body %}` contient le contenu de notre page `templates/home/index.html.twig` affiché dans le navigateur et doit être fermé par `{% endblock %}`.
+> - La balise `{% block title %}` contient le titre de notre page dans l'onglet du navigateur et doit être fermé par `{% endblock %}`.
+> - La balise `{% block body %}` contient le contenu de notre page `templates/home/index.html.twig` affiché dans le navigateur et doit être fermé par `{% endblock %}`.
 
 ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
 - __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
@@ -92,8 +92,8 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 > installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
 
 - __Executé la commande :__ `npx tailwindcss init -p`.
-> Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration tailwind.config.js. 
-> Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
+> - Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration tailwind.config.js. 
+> - Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
 ### ACTIVER LE CHARGEMENT DE POSTCSS ###
 - Se rendre dans `webpack.config.js` et ajouter la ligne :
@@ -155,8 +155,8 @@ content: [
 
 # AVANT DE COMMENCER ON PASSE A L'INSTALLATION DU BUNDLE DE SECURITE #
 - __Executé la commande :__ `composer require symfony/security-bundle`.
-> Ce composant fait partie du système de sécurité de Symfony et offre des fonctionnalités pour gérer l'authentification, l'autorisation et la sécurité dans une application Symfony.
-> Cela inclut la configuration de l'authentification des utilisateurs, la gestion des rôles et des autorisations, ainsi que la protection contre les attaques CSRF (Cross-Site Request Forgery), etc.
+> - Ce composant fait partie du système de sécurité de Symfony et offre des fonctionnalités pour gérer l'authentification, l'autorisation et la sécurité dans une application Symfony.
+> - Cela inclut la configuration de l'authentification des utilisateurs, la gestion des rôles et des autorisations, ainsi que la protection contre les attaques CSRF (Cross-Site Request Forgery), etc.
 
 ## MISE EN PLACE D'UNE BARRE DE NAVIGATION DE BASE ##
 - Se rendre sur `https://flowbite.com/docs/components/navbar/` et choisir une navbar simple.
@@ -167,6 +167,30 @@ content: [
 <a href="{{ path('app_home') }}">
 ```
 ## AJOUT D'UNE NOUVELLE ROUTE ET D'UNE NOUVELLE VUE ##
+- Se rendre dans `src\Controller\HomeConstroller.php` et y ajouter notre route test :
+```js
+#[Route('/test', name: 'app_test')]
+public function contact(): Response
+{
+    return $this->render('home/test.html.twig', [
+        'controller_name' => 'HomeController',
+]);
+}
+```
+- Passé la souris sur `'home/test.html.twig` pour générer automatiquement le template twig (la vue).
+- Se rendre sur notre navbar dans `templates\base.html.twig` et y ajouter notre nouveau lien `{{ path('app_test') }}`.
+- Se rendre sur le template twig `` et y ajouter notre texte entre les balises `block` :
+```js
+{% block body %}
+
+    JE SUIS SUR MA PAGE DE TEST
+
+{% endblock %}
+```
+### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
+- Se rendre sur `'home/test.html.twig` .
+
+
 
 Commande: `npm run install`.
 Commande: `composer install`.

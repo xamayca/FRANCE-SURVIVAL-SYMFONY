@@ -331,7 +331,7 @@ public function setUsername(string $username): static
 > - 5 - avatar : Pour stocker le chemin de la photo de profil de l'utilisateur.
 > - 6 - phone : Pour stocker le numéro de téléphone de l'utilisateur.
 > - 7 - active : Un champ booléen pour indiquer si le compte de l'utilisateur est actif ou non.
-> - Et bien plus selon vos besoins...
+> - Et bien plus selon vos besoins, pour commencer nous allons seulement utiliser (emailn...
 
 
 

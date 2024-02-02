@@ -323,15 +323,18 @@ public function setUsername(string $username): static
 > - La fonction `setUsername` utilisée pour `définir (set)` la valeur de l'attribut `$username` dans `l'objet User(table)` partout dans notre site.
 
 #### AJOUTONS ENSUITE AUTANT DE CHAMPS QUE NECESSAIRE A USER DE LA MEME FACON ####
-> - 1 - firstname : Pour stocker le prénom de l'utilisateur.
-> - 2 - lastname : Pour stocker le nom de famille de l'utilisateur.
-> - 3 - dateOfBirth : Pour stocker la date de naissance de l'utilisateur.
-> - 4 - registrationDate : Pour stocker la date d'inscription de l'utilisateur.
-> - 4 - address : Pour stocker l'adresse physique de l'utilisateur.
-> - 5 - avatar : Pour stocker le chemin de la photo de profil de l'utilisateur.
-> - 6 - phone : Pour stocker le numéro de téléphone de l'utilisateur.
-> - 7 - active : Un champ booléen pour indiquer si le compte de l'utilisateur est actif ou non.
-> - Et bien plus selon vos besoins, pour commencer, nous allons seulement utiliser (emailn...
+> - 1 - `firstname` : Pour stocker le `prénom` de l'utilisateur.
+> - 2 - `lastname` : Pour stocker le `nom de famille` de l'utilisateur.
+> - 3 - `dateOfBirth` : Pour stocker la `date de naissance` de l'utilisateur.
+> - 4 - `registrationDate` : Pour stocker la `date d'inscription` de l'utilisateur.
+> - 4 - `address` : Pour stocker `l'adresse physique` de l'utilisateur.
+> - 5 - `avatar` : Pour stocker le chemin de la `photo de profil` de l'utilisateur.
+> - 6 - `phone` : Pour stocker le `numéro de téléphone` de l'utilisateur.
+> - 7 - `active` : Un champ booléen pour indiquer si le compte de l'utilisateur est `actif ou non`.
+> > Et bien plus selon nos besoins, pour commencer, nous allons seulement utiliser, `email`, `roles`, `password`, `username` et `registrationDate` (`datetime` pour avoir la `date et l'heure`).
+
+# INSTALLATION DE LA FONCTIONALITE DE FORMULAIRES #
+- __Executer la commande suivante dans un terminal :__ `composer require symfony/form`.
 
 
 

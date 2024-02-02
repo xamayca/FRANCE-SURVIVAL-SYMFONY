@@ -337,8 +337,13 @@ public function setUsername(string $username): static
 - __Executer la commande suivante dans un terminal :__ `composer require symfony/form`.
 
 
+- __Executer la commande suivante dans un terminal :__ `composer require symfony/form`.
 
 > - **Command Terminal Utile:**`npm run install`.
 > - **Command Terminal Utile:**`npm run watch`.
 > - **Command Terminal Utile:**`composer install`.
 > - **Command Terminal Utile:**`composer update`.
+> - **Lien Documentation Utile Symfony(Formulaire):**`https://symfony.com/doc/current/forms.html#form-types`.
+> - **Lien Documentation Utile Symfony(Doctrine):**`https://symfony.com/doc/current/doctrine.html`.
+> - **Lien Documentation Utile (Google doc Kilucru):**`https://docs.google.com/spreadsheets/d/1-iiB8rURQkcdu-u62g6hcZNzuLc57tevaSu61lBr6WE/edit#gid=698370895`.
+> - **Lien Documentation Utile (TailWind CSS):**`https://tailwindcss.com/docs/installation`.

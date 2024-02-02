@@ -333,9 +333,7 @@ public function setUsername(string $username): static
 > - 7 - active : Un champ booléen pour indiquer si le compte de l'utilisateur est actif ou non.
 > - Et bien plus selon vos besoins...
 
-IsActive (est actif) : 
 
-RegistrationDate (date d'inscription) : 
 
 > - **Command Terminal Utile:**`npm run install`.
 > - **Command Terminal Utile:**`npm run watch`.

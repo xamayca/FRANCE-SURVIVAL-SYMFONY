@@ -82,7 +82,7 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE HOME (templates/home/index.html.twig)
 ## VERIFICATION DE NOTRE CONTROLLER, NOTRE ROUTE ET NOTRE VUE #
 - __Verifier que le site fonctionne en se rendant sur :__ `http://127.0.0.1:8000/`.
 > Si tout va bien, on devrait voir apparaitre notre texte à l'écran, si c'est le cas, bravo voici notre premiere page personalisé Symfony !
-> ![img.png](readme-image/view-text-twig.png)
+> > ![img.png](readme-image/view-text-twig.png)
 
 # INSTALLATION DE TAILWIND CSS #
 ## INSTALLATION DES BUNDLES REQUIS ##
@@ -152,7 +152,7 @@ content: [
 </h1>
 ```
 > Si tout va bien, on doit voir la police changée et notre `h1` être souligné en gras et Rouge !
-> ![img.png](readme-image/view-text-tailwind.png)
+> > ![img.png](readme-image/view-text-tailwind.png)
 
 
 # AVANT DE COMMENCER ON PASSE A L'INSTALLATION DU BUNDLE DE SECURITE #
@@ -196,7 +196,7 @@ public function contact(): Response
 ### VERIFICATION DE NOTRE NOUVELLE ROUTE ET DE NOTRE NOUVELLE PAGE ###
 - Se rendre sur `http://127.0.0.1:8000/`.
 > Si tout va bien, quand on clique sur notre lien `test` dans la navbar, on doit être redirigé sur `http://127.0.0.1:8000/test` et voir notre `h1` apparaitre à l'écran.
-> ![img.png](readme-image/view-text-test-page.png)
+> > ![img.png](readme-image/view-text-test-page.png)
 
 # CREATION DE LA BASE DE DONNEE DE NOTRE PROJET SYMFONY #
 ## INSTALLATION DU BUNDLE DOCTRINE ##
@@ -226,10 +226,10 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 
 ## LIAISON DE NOTRE BASE DE DONNEE A NOTRE PROJET SYMFONY ##
 - Dans PHP Storm, cliquer sur l'icône base de donnée et ensuite :
-> ![img.png](readme-image/link-database-1.png)
-> ![img.png](readme-image/link-database-2.png)
-> ![img.png](readme-image/link-database-3.png)
-> ![img.png](readme-image/link-database-4.png)
+> > ![img.png](readme-image/link-database-1.png)
+> > ![img.png](readme-image/link-database-2.png)
+> > ![img.png](readme-image/link-database-3.png)
+> > ![img.png](readme-image/link-database-4.png)
 > #### VERIFIER LES INFORMATIONS AVANT D'APPLIQUER ET DE VALIDER.
 
 ### VERIFICATION DE LA CREATION DE NOTRE BASE DE DONNEE ###
@@ -261,8 +261,10 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 > - La quatrième question nous demande donc si on veut `hash(sécurité)` les mots de passe de nos utilisateurs, donc `Yes`.
 
 # VERIFICATION DE LA CREATION DE NOTRE ENTITE USER #
-
-
+- Le fichier `src\Entity\User.php`, dans Symfony représente la classe d'entité pour modéliser et gérer les utilisateurs d'une application web.
+- Le fichier `src\Repository\UserRepository.php`, dans Symfony est généralement utilisé pour gérer les opérations de requête et d'accès à la base de données concernant les entités de l'utilisateur (User) de l'application..
+> __Executer la commande suivante dans un terminal :__ `symfony console d:s:u -f` pour mettre à jour le schéma de notre base de donnée.
+> > ![img.png](readme-image/database-verification-user-creation.png)
 
 Commande: `npm run install`.
 

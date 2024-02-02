@@ -200,26 +200,31 @@ public function contact(): Response
 
 # CREATION DE LA BASE DE DONNEE DE NOTRE PROJET SYMFONY #
 ## INSTALLATION DU BUNDLE DOCTRINE ##
-- __Executer la commande :__ `composer require orm`.
+- __Executer la commande :__ `composer require symfony/orm-pack`.
 > - Cela va ajouter le bundle `doctrine/orm` ainsi que ses dépendances à votre projet Symfony.
 > - Ce bundle permet d'intégrer Doctrine dans Symfony pour la gestion de la base de données et des entités (objet d'une table de base de données).
-- Un choix sera demander pour inclure la configuration de `Docker` :
+
+## CREATION DE NOTRE BASE DE DONEE ##
+- Se rendre a la racine du projet Symfony dans le fichier `.env` et décommenter la ligne:
 ```js
-Do you want to include Docker configuration from recipes?
-    [y] Yes
-    [n] No
-    [p] Yes permanently, never ask again for this project
-    [x] No permanently, never ask again for this project
-    (defaults to y):
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
 ```
-- Faire `Yes ou Y` si on veut installer docker.
-- Faire `No ou N` si on ne veut pas installer docker.
-- Faire `p` si on veut installer docker de façon permanente, ne plus demander pour ce projet.
-- Faire `x` si on ne veut pas installer docker de façon permanente, ne plus demander pour ce projet.
-- Par défaut, ce sera `Yes`.
+> Cette configuration utilise SQLite comme système de gestion de base de données.
+- Puis toujours dans le `.env` décommenter la ligne :
+```js
+DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+```
+> - Cette configuration utilise PostgreSQL comme système de gestion de base de données, nous n'en voulons pas pour ce projet.
+> - On peut ajuster la configuration pour utiliser d'autres systèmes de gestion de base de données, tels que MySQL ou PostgreSQL, en remplaçant l'URL de la base de données.
+- __Executer la commande :__ `symfony console doctrine:database:create`.
+> Cette commande crée la base de données pour notre projet Symfony en utilisant la configuration définie dans le fichier .env.
 
-## CREATION DE NOTRE PREMIERE ENTITE EN BASE DE DONEE ##
+### VERIFICATION DE LA CREATION DE NOTRE BASE DE DONNEE ###
+- Se rendre à la racine de notre projet dans `var\data.db`.
+> Ce fichier est pour l'instant vide, il se remplira quand on créera des entités avec Symfony.
 
+## CREATION DE NOTRE PREMIERE ENTITE (TABLE) EN BASE DE DONEE ##
+- __Executer la commande suivante dans un terminal :__ `symfony console make:user`.
 
 Commande: `npm run install`.
 

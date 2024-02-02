@@ -5,6 +5,10 @@
 - __Lancé le serveur Local Symfony avec la commande :__ `symfony server:start`.
 - __Verifier que le site fonctionne :__ `http://127.0.0.1:8000/`.
 
+## UTILISER LA BARRE DE DEBUG DEV SYMFONY ##
+- __Executé la commande :__ `composer req debug --dev`.
+> Ajoute la barre de débogage Symfony pour faciliter le débogage des applications Symfony en mode développement.
+
 ## VERIFICATION DE LA SECURITE AVEC SYMFONY ##
 - __Executé la commande :__ `symfony check:security`.
 > Utilisation de la commande pour vérifier la sécurité d'un projet Symfony.
@@ -87,7 +91,7 @@ ICI APPARAIT LE CONTENU DE NOTRE PAGE INDEX
 - __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
 > installe des dépendances nécessaires pour utiliser le framework CSS "Tailwind CSS".
 
-- __Executé la commande :__ `npm install -D tailwindcss postcss postcss-loader autoprefixer`.
+- __Executé la commande :__ `npx tailwindcss init -p`.
 > Initialise la configuration de Tailwind CSS dans un projet en créant un fichier de configuration tailwind.config.js. 
 > Et un fichier de plugins ("postcss.config.js") pour personnaliser les paramètres du framework Tailwind CSS.
 
@@ -149,6 +153,20 @@ content: [
 > Si tout va bien, on doit voir la police changée et notre h1 être souligné en gras et Rouge !
 
 
-Commande: `npm run install`.
+# AVANT DE COMMENCER ON PASSE A L'INSTALLATION DU BUNDLE DE SECURITE #
+- __Executé la commande :__ `composer require symfony/security-bundle`.
+> Ce composant fait partie du système de sécurité de Symfony et offre des fonctionnalités pour gérer l'authentification, l'autorisation et la sécurité dans une application Symfony.
+> Cela inclut la configuration de l'authentification des utilisateurs, la gestion des rôles et des autorisations, ainsi que la protection contre les attaques CSRF (Cross-Site Request Forgery), etc.
 
+## MISE EN PLACE D'UNE BARRE DE NAVIGATION DE BASE ##
+- Se rendre sur `https://flowbite.com/docs/components/navbar/` et choisir une navbar simple.
+- Se rendre dans `templates\base.html.twig` et y ajouter notre navbar.
+- Se rendre dans `src\Controller\HomeController` et trouvez le nom de la route que l'on veut utiliser (exemple : app_home).
+- Les `href` dans Symfony s'écrivent de la manière suivante :
+```js
+<a href="{{ path('app_home') }}">
+```
+## AJOUT D'UNE NOUVELLE ROUTE ET D'UNE NOUVELLE VUE ##
+
+Commande: `npm run install`.
 Commande: `composer install`.

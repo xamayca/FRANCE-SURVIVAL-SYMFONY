@@ -210,19 +210,19 @@ public function contact(): Response
 > - Le bundle Maker de Symfony fournit un ensemble de commandes pratiques qui aident à générer du code (comme des contrôleurs, des entités, des formulaires, etc.) et à accélérer le développement.
 
 ## CREATION DE NOTRE BASE DE DONEE ##
-- Se rendre a la racine du projet Symfony dans le fichier `.env` et décommenter la ligne:
+- Se rendre à la racine du projet Symfony dans le fichier `.env` et décommenter la ligne:
 ```js
 DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
 ```
-> Cette configuration utilise SQLite comme système de gestion de base de données.
+> Cette configuration utilise `SQLite` comme système de gestion de base de données.
 - Puis toujours dans le `.env` décommenter la ligne :
 ```js
 DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
 ```
-> - Cette configuration utilise PostgreSQL comme système de gestion de base de données, nous n'en voulons pas pour ce projet.
-> - On peut ajuster la configuration pour utiliser d'autres systèmes de gestion de base de données, tels que MySQL ou PostgreSQL, en remplaçant l'URL de la base de données.
+> - Cette configuration utilise `PostgreSQL` comme système de gestion de base de données, nous n'en voulons pas pour ce projet.
+> - On peut ajuster la configuration pour utiliser d'autres systèmes de gestion de base de données, tels que `MySQL` ou `PostgreSQL`, en remplaçant l'URL de la base de données.
 - __Executer la commande :__ `symfony console doctrine:database:create`.
-> Cette commande crée la base de données pour notre projet Symfony en utilisant la configuration définie dans le fichier .env.
+> Cette commande crée la base de données pour notre projet Symfony en utilisant la configuration définie dans le fichier `.env`.
 
 ### VERIFICATION DE LA CREATION DE NOTRE BASE DE DONNEE ###
 - Se rendre à la racine de notre projet dans `var\data.db`.
@@ -230,6 +230,8 @@ DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&ch
 
 ## CREATION DE NOTRE PREMIERE ENTITE (TABLE) EN BASE DE DONEE ##
 - __Executer la commande suivante dans un terminal :__ `symfony console make:user`.
+
+
 
 Commande: `npm run install`.
 
